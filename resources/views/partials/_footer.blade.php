@@ -21,9 +21,6 @@
             <div class="big-column col-xl-3 col-lg-3 col-md-12">
               <div class="footer-column about-widget">
                 <div class="logo"><a href="#"><img src="images/logo-2.svg" alt=""></a></div>
-                <p class="phone-num"><span>Call us </span><a href="thebeehost%40support.html">+255 684797667</a></p>
-                <p class="address">Nssf Mafao House 7th Floor, Anza Hub<br> Arusha, Tanznaia. 
-                  <br><a href="mailto:support@superio.com" class="email">support@ajiraconnect.com</a></p>
               </div>
             </div>
 

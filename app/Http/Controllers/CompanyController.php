@@ -7,6 +7,17 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
+
+
+    public function index()
+    {
+        $companies = Company::orderBy("name","asc")
+        ->paginate(10);
+        return view("pages.companies", compact("companies"));
+    }
+
+
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([

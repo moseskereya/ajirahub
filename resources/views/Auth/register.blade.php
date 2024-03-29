@@ -9,7 +9,17 @@
                 <h3>Create a Free Superio Account</h3>
                 <form method="post" action="/register">
                   @csrf
+                  <input type="hidden" name="type" id="user_type" value="">
                   <div class="form-group">
+                    <div class="btn-box row">
+                      <div class="col-lg-6 col-md-12">
+                        <a href="#" class="theme-btn btn-style-seven" onclick="setUserType(0)"><i class="la la-user"></i> Candidate </a>
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                        <a href="#" class="theme-btn btn-style-four" onclick="setUserType(1)"><i class="la la-briefcase"></i> Employer </a>
+                      </div>
+                    </div>
+                    
                   </div>
                   <div class="form-group">
                     <label>User Name</label>
@@ -52,3 +62,10 @@
         </div>
       </div>
 @endsection 
+
+
+<script>
+  function setUserType(type) {
+    document.getElementById('user_type').value = type;
+  }
+</script>

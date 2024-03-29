@@ -4,102 +4,73 @@
     @include('components.banner')
     <!-- End Banner Section-->
         <!-- Job Categories -->
-        <section class="layout-pt-120 layout-pb-60 border-bottom-none">
-          <div class="bg-shape -bottom -right js-rellax" data-rellax-speed="0" data-rellax-desktop-speed="-2" data-rellax-percentage="0.5">
-            <img src="images/index-11/shapes/1.png" alt="image">
-          </div>
-    
+        <section class="layout-pt-60 layout-pb-60 border-bottom-none">
           <div class="auto-container">
-            <div class="sec-title text-center">
-              <h2>Popular Job Categories</h2>
-              <div class="text">2020 jobs live - 293 added today.</div>
+            <div class="d-flex align-items-center justify-content-between wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+              <div class="sec-title">
+                <h2>Browse by Category</h2>
+                <div class="text">{{$totaljobs}} Jobs live - {{$jobsAddedToday}} added today.</div>
+              </div>
+              <a href="" class="text ud-btn2" previewlistener="true">See all <i class="fal fa-long-arrow-right"></i></a>
             </div>
-    
-            <div class="row wow fadeInUp">
+            <div class="row wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
               <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
+              <div class="category-block-two at-home21 col-xl-2 col-lg-3 col-md-4 col-sm-6">
                 <div class="inner-box">
                   <div class="content">
                     <span class="icon flaticon-money-1"></span>
-                    <h4><a href="#">Accounting / Finance</a></h4>
-                    <p>(2 open positions)</p>
+                    <h4><a href="#">Marketing</a></h4>
+                    <p>(86 open positions)</p>
                   </div>
                 </div>
               </div>
-    
               <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
+              <div class="category-block-two at-home21 col-xl-2 col-lg-3 col-md-4 col-sm-6">
                 <div class="inner-box">
                   <div class="content">
                     <span class="icon flaticon-promotion"></span>
-                    <h4><a href="#">Marketing</a></h4>
-                    <p>86 open positions)</p>
+                    <h4><a href="#">Design</a></h4>
+                    <p>(43 open positions)</p>
                   </div>
                 </div>
               </div>
-    
               <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
+              <div class="category-block-two at-home21 col-xl-2 col-lg-3 col-md-4 col-sm-6">
                 <div class="inner-box">
                   <div class="content">
                     <span class="icon flaticon-vector"></span>
-                    <h4><a href="#">Design</a></h4>
-                    <p>43 open positions)</p>
-                  </div>
-                </div>
-              </div>
-    
-              <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
-                <div class="inner-box">
-                  <div class="content">
-                    <span class="icon flaticon-web-programming"></span>
                     <h4><a href="#">Development</a></h4>
                     <p>(12 open positions)</p>
                   </div>
                 </div>
               </div>
-    
               <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
+              <div class="category-block-two at-home21 col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                <div class="inner-box">
+                  <div class="content">
+                    <span class="icon flaticon-web-programming"></span>
+                    <h4><a href="#">Customer Service</a></h4>
+                    <p>(72 open positions)</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Category Block -->
+              <div class="category-block-two at-home21 col-xl-2 col-lg-3 col-md-4 col-sm-6">
                 <div class="inner-box">
                   <div class="content">
                     <span class="icon flaticon-headhunting"></span>
-                    <h4><a href="#">Human Resource</a></h4>
-                    <p>55 open positions)</p>
+                    <h4><a href="#">Health and Care</a></h4>
+                    <p>(25 open positions)</p>
                   </div>
                 </div>
               </div>
-    
               <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
+              <div class="category-block-two at-home21 col-xl-2 col-lg-3 col-md-4 col-sm-6">
                 <div class="inner-box">
                   <div class="content">
                     <span class="icon flaticon-rocket-ship"></span>
-                    <h4><a href="#">Project Management</a></h4>
-                    <p>(2 open positions)</p>
-                  </div>
-                </div>
-              </div>
-    
-              <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
-                <div class="inner-box">
-                  <div class="content">
-                    <span class="icon flaticon-support-1"></span>
-                    <h4><a href="#">Customer Service</a></h4>
-                    <p>(2 open positions)</p>
-                  </div>
-                </div>
-              </div>
-    
-              <!-- Category Block -->
-              <div class="category-block-three -type-2 col-lg-3 col-md-6 col-sm-12">
-                <div class="inner-box">
-                  <div class="content">
-                    <span class="icon flaticon-first-aid-kit-1"></span>
-                    <h4><a href="#">Health and Care</a></h4>
-                    <p>(25 open positions)</p>
+                    <h4><a href="#">Automotive Jobs</a></h4>
+                    <p>(92 open positions)</p>
                   </div>
                 </div>
               </div>
@@ -202,902 +173,154 @@
             <div class="default-tabs tabs-box">
               <!--Tabs Box-->
               <ul class="tab-buttons -pills">
-                <li class="tab-btn" data-tab="#tab1">All</li>
-                <li class="tab-btn active-btn" data-tab="#tab2">Trending</li>
-                <li class="tab-btn" data-tab="#tab3">Design</li>
-                <li class="tab-btn" data-tab="#tab4">Marketing</li>
-                <li class="tab-btn" data-tab="#tab5">Health</li>
-              </ul>
+                <li class="tab-btn active-btn" data-tab="#tab1">Popular Jobs</li>
+                @foreach($categories as $category)
+                    <li class="tab-btn" data-tab="#tab{{ $loop->iteration + 1 }}">{{ $category->name }}</li>
+                @endforeach
+            </ul>
     
               <div class="tabs-content wow fadeInUp">
                 <!--Tab-->
                 <div class="tab" id="tab1">
-                  <div class="row">
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-1.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-2.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-3.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-4.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-5.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-6.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-7.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-8.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-9.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
+                  <div class="row job-blocks">
+                      @foreach($jobs as $job)
+                          <div class="job-block col-lg-4 col-md-6 col-sm-12">
+                              <div class="inner-box">
+                                  <div class="content">
+                                      <span class="company-logo">
+                                        <img class="rounded-full" src="images/resource/company-logo/{{ $job->company_id }}.png" alt="">
+                                      </span>
+                                      <h4><a href="/jobs/job/{{$job->id}}">{{ $job->title }}</a></h4>
+                                      <ul class="job-info">
+                                          <li><span class="icon flaticon-briefcase"></span> {{ $job->category->name }}</li>
+                                          <li><span class="icon flaticon-map-locator"></span> {{ $job->city->name }}</li>
+                                      </ul>
+                                      <ul class="job-other-info">
+                                          @if($job->urgent)
+                                              <li class="required">Urgent</li>
+                                          @endif
+                                          <li class="time">{{ $job->job_type }}</li>
+                                      </ul>
+                                      <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                                  </div>
+                              </div>
+                          </div>
+                      @endforeach
                   </div>
-                </div>
+              </div>
+              
     
                 <!--Tab-->
-                <div class="tab active-tab" id="tab2">
+                <div class="tab  active-tab" id="tab2">
                   <div class="row">
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-1.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-2.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-3.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-4.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-5.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-6.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-7.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-8.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-9.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
+                    <div class="row job-blocks">
+                      @foreach($itJobs as $job)
+                          <div class="job-block col-lg-4 col-md-6 col-sm-12">
+                              <div class="inner-box">
+                                  <div class="content">
+                                      <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/{{ $job->company_id }}.png" alt=""></span>
+                                      <h4><a href="/jobs/job/{{$job->id}}">{{ $job->title }}</a></h4>
+                                      <ul class="job-info">
+                                          <li><span class="icon flaticon-briefcase"></span> {{ $job->category->name }}</li>
+                                          <li><span class="icon flaticon-map-locator"></span> {{ $job->city->name }}</li>
+                                      </ul>
+                                      <ul class="job-other-info">
+                                          @if($job->urgent)
+                                              <li class="required">Urgent</li>
+                                          @endif
+                                          <li class="time">{{ $job->job_type }}</li>
+                                      </ul>
+                                      <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                                  </div>
+                              </div>
+                          </div>
+                      @endforeach
+                  </div>
                   </div>
                 </div>
     
                 <!--Tab-->
                 <div class="tab" id="tab3">
                   <div class="row">
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-1.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-2.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-3.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-4.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-5.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-6.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-7.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-8.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-9.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
+                    <div class="row job-blocks">
+                      @foreach($healthJobs  as $job)
+                          <div class="job-block col-lg-4 col-md-6 col-sm-12">
+                              <div class="inner-box">
+                                  <div class="content">
+                                      <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/{{ $job->company_id }}.png" alt=""></span>
+                                      <h4><a href="/jobs/job/{{$job->id}}">{{ $job->title }}</a></h4>
+                                      <ul class="job-info">
+                                          <li><span class="icon flaticon-briefcase"></span> {{ $job->category->name }}</li>
+                                          <li><span class="icon flaticon-map-locator"></span> {{ $job->city->name }}</li>
+                                      </ul>
+                                      <ul class="job-other-info">
+                                          @if($job->urgent)
+                                              <li class="required">Urgent</li>
+                                          @endif
+                                          <li class="time">{{ $job->job_type }}</li>
+                                      </ul>
+                                      <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                                  </div>
+                              </div>
+                          </div>
+                      @endforeach
                   </div>
-                </div>
-    
-                <!--Tab-->
-                <div class="tab" id="tab5">
-                  <div class="row">
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-1.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-2.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-3.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-4.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-5.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-6.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-7.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-8.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-9.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
                   </div>
                 </div>
     
                 <!--Tab-->
                 <div class="tab" id="tab4">
-                  <div class="row">
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-1.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                  <div class="row job-blocks">
+                    @foreach($finaceJobs  as $job)
+                        <div class="job-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="content">
+                                    <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/{{ $job->company_id }}.png" alt=""></span>
+                                    <h4><a href="/jobs/job/{{$job->id}}">{{ $job->title }}</a></h4>
+                                    <ul class="job-info">
+                                        <li><span class="icon flaticon-briefcase"></span> {{ $job->category->name }}</li>
+                                        <li><span class="icon flaticon-map-locator"></span> {{ $job->city->name }}</li>
+                                    </ul>
+                                    <ul class="job-other-info">
+                                        @if($job->urgent)
+                                            <li class="required">Urgent</li>
+                                        @endif
+                                        <li class="time">{{ $job->job_type }}</li>
+                                    </ul>
+                                    <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-2.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                    @endforeach
+                </div>
+                </div>
+
+                
+                <!--Tab-->
+                <div class="tab" id="tab5">
+                  <div class="row job-blocks">
+                    @foreach($educationJobs  as $job)
+                        <div class="job-block col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                                <div class="content">
+                                    <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/{{ $job->company_id }}.png" alt=""></span>
+                                    <h4><a href="/jobs/job/{{$job->id}}">{{ $job->title }}</a></h4>
+                                    <ul class="job-info">
+                                        <li><span class="icon flaticon-briefcase"></span> {{ $job->category->name }}</li>
+                                        <li><span class="icon flaticon-map-locator"></span> {{ $job->city->name }}</li>
+                                    </ul>
+                                    <ul class="job-other-info">
+                                        @if($job->urgent)
+                                            <li class="required">Urgent</li>
+                                        @endif
+                                        <li class="time">{{ $job->job_type }}</li>
+                                    </ul>
+                                    <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-3.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-4.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-5.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-6.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-7.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-8.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- Job Block -->
-                    <div class="job-block col-lg-4 col-md-6 col-sm-12">
-                      <div class="inner-box">
-                        <div class="content">
-                          <span class="company-logo"><img class="rounded-full" src="images/resource/company-logo/1-9.png" alt=""></span>
-                          <h4><a href="#">Software Engineer</a></h4>
-                          <ul class="job-info">
-                            <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                            <li><span class="icon flaticon-map-locator"></span> London, UK</li>
-                          </ul>
-                          <ul class="job-other-info">
-                            <li class="required">Urgent</li>
-                            <li class="time">Full Time</li>
-                          </ul>
-                          <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
-                        </div>
-                      </div>
-                    </div>
-    
-                  </div>
+                    @endforeach
+                </div>
                 </div>
               </div>
             </div>
@@ -1124,7 +347,7 @@
                     <figure class="image"><img src="images/index-15/cities/1.png" alt=""></figure>
                     <div class="overlay-box">
                       <div class="content">
-                        <h5>New York</h5>
+                        <h5>Arusha</h5>
                         <span class="total-jobs">12 Jobs</span>
                         <a href="job-list-v1.html" class="overlay-link" previewlistener="true"></a>
                       </div>
@@ -1140,7 +363,7 @@
                     <figure class="image"><img src="images/index-15/cities/2.png" alt=""></figure>
                     <div class="overlay-box">
                       <div class="content">
-                        <h5>Paris</h5>
+                        <h5>Dar Es Salaam</h5>
                         <span class="total-jobs">12 Jobs</span>
                         <a href="job-list-v1.html" class="overlay-link" previewlistener="true"></a>
                       </div>
@@ -1156,7 +379,7 @@
                     <figure class="image"><img src="images/index-15/cities/3.png" alt=""></figure>
                     <div class="overlay-box">
                       <div class="content">
-                        <h5>London</h5>
+                        <h5>Dodoma</h5>
                         <span class="total-jobs">12 Jobs</span>
                         <a href="job-list-v1.html" class="overlay-link" previewlistener="true"></a>
                       </div>
@@ -1172,7 +395,7 @@
                     <figure class="image"><img src="images/index-15/cities/4.png" alt=""></figure>
                     <div class="overlay-box">
                       <div class="content">
-                        <h5>Los Angeles</h5>
+                        <h5>Nairobi</h5>
                         <span class="total-jobs">12 Jobs</span>
                         <a href="job-list-v1.html" class="overlay-link" previewlistener="true"></a>
                       </div>

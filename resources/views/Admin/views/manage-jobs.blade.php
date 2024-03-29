@@ -56,18 +56,30 @@
                           <h6>{{$job->title}}</h6>
                           <span class="info"><i class="icon flaticon-map-locator"></i> {{$job->city->name}}</span>
                         </td>
-                        <td class="applied"><a href="#">3+ Applied</a></td>
+                        <td class="applied">
+                          @if ($job->applications->count() > 0)
+                              <a href="/applicants">{{$job->applications->count()}} Applied</a>
+                          @else
+                              No applicants yet
+                          @endif
+                      </td>
                         <td>{{$job->created_at}} <br>{{$job->expiration_date}}</td>
                         <td class="status">Active</td>
                         <td>
                           <div class="option-box">
                             <ul class="option-list">
                               <li><button data-text="View Aplication"><span class="la la-eye"></span></button></li>
-                              <li><button data-text="Reject Aplication"><span class="la la-pencil"></span></button></li>
-                              <form  method="POST">
+                             <li>
+                                 <a href="/jobedit/{{$job->id}}" data-text="Edit Job">
+                                     <span class="la la-pencil"></span>
+                                 </a>
+                             </li>
+                              <form method="delette" action="/jobdelete">
                               @csrf
-                              @method('DELETE')
-                               <li><button data-text="Delete Aplication"><span class="la la-trash"></span></button></li>
+                               <li>
+                                <button data-text="Delete Aplication"><span class="la la-trash"></span>
+                              </button>
+                              </li>
                               </form>
                             </ul>
                            </div>
@@ -78,6 +90,7 @@
                         <p>You dont have jobs yet</p>
                       @endforelse
                     </table>
+                    {{$jobs->links()}}
                   </div>
                 </div>
               </div>
@@ -87,7 +100,6 @@
       </div>
     </section>
     <!-- End Dashboard -->
-
     <!-- Copyright -->
     <div class="copyright-text">
       <p>© 2024 Superio. All Right Reserved.</p>

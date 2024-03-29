@@ -4,27 +4,30 @@
           <div class="content-column col-xl-7 col-lg-8">
             <div class="inner-column">
               <div class="title-box wow fadeInUp" data-wow-delay="300ms">
-                <h3>There Are 93,178 Postings Here For you!</h3>
+                <h3>There Are {{$totaljobs}} Postings Here For you!</h3>
                 <div class="text text-white">Find Jobs, Employment & Career Opportunities</div>
               </div>
 
               <!-- Job Search Form -->
               <div class="job-search-form wow fadeInUp" data-wow-delay="600ms">
-                <form method="post" action="https://creativelayers.net/themes/superio/job-list-v10.html">
+                <form action="/jobs" method="get" name="search">
                   <div class="row">
-                    <div class="form-group col-lg-5">
-                      <span class="icon flaticon-search-1"></span>
-                      <input type="text" name="field_name" placeholder="Job title, keywords, or company">
-                    </div>
-                    <!-- Form Group -->
-                    <div class="form-group col-lg-4 location">
-                      <span class="icon flaticon-map-locator"></span>
-                      <input type="text" name="field_name" placeholder="City or postcode">
-                    </div>
-                    <!-- Form Group -->
-                    <div class="form-group col-lg-3 btn-box">
-                      <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Find Jobs</span></button>
-                    </div>
+                      <div class="form-group col-lg-5">
+                          <span class="icon flaticon-search-1"></span>
+                          <input type="search" name="search" placeholder="Job title, keywords, or company">
+                      </div>
+                      <div class="form-group col-lg-4">
+                          <span class="icon flaticon-folder"></span>
+                          <select name="category" id="category">
+                              <option value="">All Categories</option>
+                              @foreach($categories as $category)
+                              <option value="{{ $category->id }}">{{ $category->name }}</option>
+                              @endforeach
+                          </select>
+                      </div>
+                      <div class="form-group col-lg-3 btn-box">
+                          <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Find Jobs</span></button>
+                      </div>
                   </div>
                 </form>
               </div>
@@ -56,7 +59,7 @@
                     <h4><a href="#">Software Engineer</a></h4>
                     <ul class="job-info">
                       <li><span class="icon flaticon-briefcase"></span> Segment</li>
-                      <li><span class="icon flaticon-map-locator"></span> London, UK</li>
+                      <li><span class="icon flaticon-map-locator"></span> Arusha </li>
                     </ul>
                     <ul class="job-other-info">
                       <li class="required">Urgent</li>

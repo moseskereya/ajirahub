@@ -29,7 +29,9 @@ class AdminsController extends Controller
     public function managejobs()
     {
         $user = auth()->user();
-        $jobs = Job::where("user_id", $user->id)->get();
+        $jobs = Job::where("user_id", $user->id)
+        ->orderBy("created_at","desc")
+        ->paginate(10);
         return view("Admin.views.manage-jobs", compact("jobs"));
     }
 
@@ -82,18 +84,15 @@ class AdminsController extends Controller
             Log::error($th);
             return redirect()->back()->with('error', 'An error occurred: ' . $th->getMessage());
         }
-        
     }
 
-    public function edit(Job $job)
+    public function edit($id)
     {
-        $job = Job::with(['company', 'user', 'city', 'category'])->find($job->id);
-        $company = Company::all();
-        $userJobs = User::all();
-        $locations  = City::all();
-        $jobCategory = Category::all();
-
-        return view('');
+        $job = Job::findOrFail($id);
+        $jobcategories = Category::all();
+        $locations = City::all();
+        $companies = Company::all();
+        return view('Admin.views.dashboard-job-edit', compact('job', 'jobcategories', 'locations', 'companies'));
     }
 
     public function destroy(Job $job)

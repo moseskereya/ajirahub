@@ -11,19 +11,19 @@ class Job extends Model
 {
     use HasFactory;
 
-    public function categoty() 
-    {
-       return $this->hasMany(Category::class);
-    }
-
-    public function city ()
-    {
-      return $this->belongsTo(City::class);
-    }
-
     public function company()
     {
         return $this->belongsTo(Company::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
     }
 
     public function user()
@@ -35,11 +35,18 @@ class Job extends Model
     {
       return Str::words(strip_tags($this->description), 50);
     }
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
+    }
 
       protected $casts = [
             'skills' => 'array',
             'responsibilities' => 'array',
+            'expiration_date' => 'datetime',
         ];
+
+    
 
 
 }

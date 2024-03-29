@@ -74,6 +74,55 @@
              }
          });
      });
+
+
+      jQuery('.call-modal').on('click', function(event) {
+            event.preventDefault();
+            this.blur();
+    
+            var isLogin = jQuery(this).hasClass('apply');
+            var popupUrl = '/apply' 
+    
+            jQuery.get(popupUrl, function(html) {
+                var $popup = jQuery(html).appendTo('body').modal({
+                    fadeDuration: 300,
+                    fadeDelay: 0.15
+                });
+    
+                var $errorMessages = $popup.find('.text-red-500');
+                // If there are error messages, prevent the popup from closing
+                if ($errorMessages.length > 0) {
+                    $popup.modal('lock');
+                }
+            });
+        });
+
+
+
+        function smoothScroll(event) {
+        event.preventDefault();
+        const targetId = event.target.getAttribute('href').substr(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const start = window.pageYOffset;
+            const end = targetElement.offsetTop;
+            const distance = end - start;
+            const duration = 2000;
+            let startTime = null;
+
+            function animate(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const easing = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                const scrollTo = easing(Math.min(timeElapsed / duration, 1)) * distance + start;
+                window.scrollTo(0, scrollTo);
+                if (timeElapsed < duration) requestAnimationFrame(animate);
+            }
+
+            requestAnimationFrame(animate);
+        }
+    }
+
  </script>
  
   

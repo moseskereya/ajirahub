@@ -3,8 +3,12 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,20 +17,40 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         \App\Models\User::factory(5)->create();
+        //  \App\Models\User::factory(5)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Scott',
-        //     'email' => 'me@scottcate.com',
-        // ]);
-         // Seed the cities table
+           $users = [
+                [
+                'name'=>'Moses',
+                'email'=>'me@swiftspace.co.tz',
+                'email_verified_at' => now(),
+                'remember_token' => Str::random(10),
+                'password'=> bcrypt('me@aspcodes77'),
+                ],
+
+                [
+                'name'=>'Manager',
+                'email'=>'manager@swiftspace.com',
+                'email_verified_at' => now(),
+                'remember_token' => Str::random(10),
+                'password'=> bcrypt('password'),
+                ],
+            ];
+             
+            foreach ($users as $key => $user) {
+                User::create($user);
+            }
+         
 
          $cites = [
             ['name' => 'Dar es Salaam'],
             ['name' => 'Dodoma'],
             ['name' => 'Arusha'],
             ['name' => 'Mwanza'],
-            ['name' => 'Zanzibar City'],
+            ['name' => 'Zanzibar'],
+            ['name' => 'Kilimanjaro'],
+            ['name' => 'Nairobi'],
+
          ];
            DB::table('cities')->insert($cites);
 
@@ -120,5 +144,467 @@ class DatabaseSeeder extends Seeder
         ] ;
 
      DB::table('companies')->insert($companies);
+
+
+     $jobs =  [
+        [
+        'title' => 'Software Developer',
+        'description' => 'We are looking for a skilled software developer to join our team...',
+        'salary' => 80000.00,
+        'image' => 'software_developer_image.jpg',
+        'position' => 'Full-time',
+        'expiration_date' => '2024-05-24 00:00:00',
+        'skills' => 'PHP, Laravel, JavaScript',
+        'job_type' => 'Development',
+        'experience_level' => 'Mid-Level',
+        'education_level' => 'Bachelor\'s Degree',
+        'is_remote' => false,
+        'urgent' => false,
+        'responsibilities' => 'Develop and maintain software applications...',
+        'company_id' => 1, 
+        'category_id' => 1,
+        'city_id' => 1, 
+        'user_id' => 1, 
+        'created_at' => now(),
+        'updated_at' => now(),
+        ],
+        [
+            'title' => 'Laravel Developer',
+            'description' => 'Description for another job...',
+            'salary' => 75000.00,
+            'image' => 'another_job_image.jpg',
+            'position' => 'Part-time',
+            'expiration_date' =>  '2024-04-24 00:00:00',
+            'skills' => 'Java, Spring Boot',
+            'job_type' => 'Development',
+            'experience_level' => 'Junior',
+            'education_level' => 'Associate\'s Degree',
+            'is_remote' => true,
+            'urgent' => true,
+            'responsibilities' => 'Responsibilities for another job...',
+            'company_id' => 2,
+            'category_id' => 2,
+            'city_id' => 2,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+       [
+         'title' => 'Frontend Developer',
+        'description' => 'Join our dynamic team as a Frontend Developer and work on cutting-edge user interfaces...',
+        'salary' => 90000.00,
+        'image' => 'frontend_developer_image.jpg',
+        'position' => 'Full-time',
+        'expiration_date' =>  '2024-03-26 00:00:00',
+        'skills' => 'HTML, CSS, JavaScript, React',
+        'job_type' => 'Development',
+        'experience_level' => 'Senior',
+        'education_level' => 'Bachelor\'s Degree',
+        'is_remote' => false,
+        'urgent' => false,
+        'responsibilities' => 'Design and implement user interfaces for web applications...',
+        'company_id' => 3,
+        'category_id' => 1,
+        'city_id' => 3,
+        'user_id' => 1,
+        'created_at' => now(),
+        'updated_at' => now(),
+        ],
+        [
+            'title' => 'Marketing Specialist',
+            'description' => 'Exciting opportunity for a Marketing Specialist to drive marketing initiatives and brand awareness.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 85000.00,
+            'image' => 'marketing_specialist_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' =>  '2024-03-28 00:00:00',
+            'skills' => 'Digital Marketing, Social Media, SEO',
+            'job_type' => 'Marketing',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Master\'s Degree',
+            'is_remote' => true,
+            'urgent' => false,
+            'responsibilities' => 'Develop and execute marketing strategies to promote the brand...',
+            'company_id' => 4,
+            'category_id' => 2,
+            'city_id' => 4,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Data Scientist',
+            'description' => 'Seeking a Data Scientist to analyze large datasets and derive valuable insights for business decision-making.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 95000.00,
+            'image' => 'data_scientist_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' =>  '2024-04-23 00:00:00',
+            'skills' => 'Python, Machine Learning, Data Analysis',
+            'job_type' => 'Data Science',
+            'experience_level' => 'Senior',
+            'education_level' => 'Ph.D. in Data Science',
+            'is_remote' => false,
+            'urgent' => true,
+            'responsibilities' => 'Apply advanced statistical and machine learning techniques to analyze data...',
+            'company_id' => 5,
+            'category_id' => 3,
+            'city_id' => 5,
+             'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'UX/UI Designer',
+            'description' => 'Exciting opportunity for a talented UX/UI Designer to create user-centered designs.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 85000.00,
+            'image' => 'ux_ui_designer_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' =>  '2024-04-20 00:00:00',
+            'skills' => 'UX Design, UI Design, Prototyping',
+            'job_type' => 'Design',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Bachelor\'s Degree',
+            'is_remote' => true,
+            'urgent' => false,
+            'responsibilities' => 'Create wireframes, prototypes, and design user interfaces for web and mobile applications...',
+            'company_id' => 1,
+            'category_id' => 1,
+            'city_id' => 1,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+            ],
+        [
+            'title' => 'Sales Manager',
+            'description' => 'Join our Sales team as a Sales Manager and lead a high-performance sales force.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 90000.00,
+            'image' => 'sales_manager_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' =>  '2024-07-04 00:00:00',
+            'skills' => 'Sales Management, Business Development, Negotiation',
+            'job_type' => 'Sales',
+            'experience_level' => 'Senior',
+            'education_level' => 'Master\'s Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Develop and implement sales strategies, manage sales teams, and achieve revenue targets...',
+            'company_id' => 2,
+            'category_id' => 2,
+            'city_id' => 2,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Network Engineer',
+            'description' => 'Seeking a skilled Network Engineer to design, implement, and manage network infrastructure.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 95000.00,
+            'image' => 'network_engineer_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' =>  '2024-06-18 00:00:00',
+            'skills' => 'Cisco, Networking, Security',
+            'job_type' => 'IT',
+            'experience_level' => 'Senior',
+            'education_level' => 'Bachelor\'s Degree in Computer Science',
+            'is_remote' => false,
+            'urgent' => true,
+            'responsibilities' => 'Design and implement secure and scalable network solutions...',
+            'company_id' => 3,
+            'category_id' => 3,
+            'city_id' => 3,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Content Writer',
+            'description' => 'Exciting opportunity for a creative Content Writer to produce engaging and high-quality content.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 80000.00,
+            'image' => 'content_writer_image.jpg',
+            'position' => 'Part-time',
+            'expiration_date' => '2024-03-26 00:00:00',
+            'skills' => 'Content Writing, Copywriting, SEO',
+            'job_type' => 'Marketing',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Bachelor\'s Degree in English or Journalism',
+            'is_remote' => true,
+            'urgent' => false,
+            'responsibilities' => 'Create compelling and SEO-friendly content for various marketing channels...',
+            'company_id' => 4,
+            'category_id' => 1,
+            'city_id' => 4,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+        [
+            'title' => 'Product Manager',
+            'description' => 'Join our Product Management team as a Product Manager and lead the development and launch of innovative products.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 100000.00,
+            'image' => 'product_manager_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' =>  '2024-04-25 00:00:00',
+            'skills' => 'Product Management, Agile, Market Research',
+            'job_type' => 'Product Management',
+            'experience_level' => 'Senior',
+            'education_level' => 'Master\'s Degree',
+            'is_remote' => false,
+            'urgent' => true,
+            'responsibilities' => 'Define product strategy, prioritize features, and collaborate with cross-functional teams...',
+            'company_id' => 5,
+            'category_id' => 2,
+            'city_id' => 5,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Graphic Designer',
+            'description' => 'Exciting opportunity for a creative Graphic Designer to create visually appealing designs for various marketing materials.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 85000.00,
+            'image' => 'graphic_designer_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-18 00:00:00',
+            'skills' => 'Graphic Design, Adobe Creative Suite',
+            'job_type' => 'Design',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Bachelor\'s Degree in Graphic Design',
+            'is_remote' => true,
+            'urgent' => false,
+            'responsibilities' => 'Create graphics for online and offline marketing materials, including social media, websites, and print...',
+            'company_id' => 1,
+            'category_id' => 1,
+            'city_id' => 1,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'IT Security Analyst',
+            'description' => 'Seeking an experienced IT Security Analyst to ensure the security of our information systems and networks.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+            
+            ',
+            'salary' => 95000.00,
+            'image' => 'it_security_analyst_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-14 00:00:00',
+            'skills' => 'Cybersecurity, Penetration Testing, Risk Management',
+            'job_type' => 'IT',
+            'experience_level' => 'Senior',
+            'education_level' => 'Bachelor\'s Degree in Cybersecurity',
+            'is_remote' => false,
+            'urgent' => true,
+            'responsibilities' => 'Conduct security assessments, analyze vulnerabilities, and implement security measures...',
+            'company_id' => 2,
+            'category_id' => 3,
+            'city_id' => 2,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Customer Support Specialist',
+            'description' => 'Join our Customer Support team as a Specialist to provide exceptional support to our customers.
+            As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.',
+            'salary' => 75000.00,
+            'image' => 'customer_support_specialist_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-04-14 00:00:00',
+            'skills' => 'Customer Service, Communication, Problem Solving',
+            'job_type' => 'Customer Support',
+            'experience_level' => 'Entry-Level',
+            'education_level' => 'High School Diploma',
+            'is_remote' => true,
+            'urgent' => false,
+            'responsibilities' => 'Assist customers with inquiries, troubleshoot issues, and provide product information...',
+            'company_id' => 3,
+            'category_id' => 2,
+            'city_id' => 3,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+        [
+            'title' => 'Financial Analyst',
+            'description' => 'We are seeking a detail-oriented and analytical Financial Analyst...',
+            'salary' => 75000.00,
+            'image' => 'financial_analyst_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Financial Analysis, Excel, Reporting',
+            'job_type' => 'Finance',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Bachelor\'s Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Conduct financial analysis, create financial reports...',
+            'company_id' => 1,
+            'category_id' => 3,
+            'city_id' => 1,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+        [
+            'title' => 'Education Coordinator',
+            'description' => 'Our institution is hiring an Education Coordinator to manage our educational programs...',
+            'salary' => 60000.00,
+            'image' => 'education_coordinator_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Education Management, Communication, Organization',
+            'job_type' => 'Education',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Bachelor\'s Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Coordinate educational programs, collaborate with instructors...',
+            'company_id' => 1,
+            'category_id' => 4,
+            'city_id' => 1,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Finance Manager',
+            'description' => 'We are seeking a skilled finance manager to oversee our company\'s financial health...',
+            'salary' => 90000.00,
+            'image' => 'finance_manager_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Financial analysis, Budgeting, Forecasting',
+            'job_type' => 'Finance',
+            'experience_level' => 'Senior',
+            'education_level' => 'Master\'s Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Manage financial reporting, budgeting, and forecasting processes...',
+            'company_id' => 1,
+            'category_id' => 3,
+            'city_id' => 1,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+        [
+            'title' => 'Teacher',
+            'description' => 'We are seeking a dedicated teacher to educate and inspire our students...',
+            'salary' => 60000.00,
+            'image' => 'teacher_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Teaching, Classroom management, Curriculum development',
+            'job_type' => 'Education',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Bachelor\'s Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Plan and deliver lessons, assess student progress, and support student learning...',
+            'company_id' => 3,
+            'category_id' => 4,
+            'city_id' => 3,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'School Counselor',
+            'description' => 'We are hiring a compassionate school counselor to support students in their academic and personal growth...',
+            'salary' => 65000.00,
+            'image' => 'school_counselor_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Counseling, Student support, Crisis intervention',
+            'job_type' => 'Education',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Master\'s Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Provide counseling services, support student well-being, and collaborate with educators...',
+            'company_id' => 4,
+            'category_id' => 4,
+            'city_id' => 3,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+        [
+            'title' => 'Registered Nurse',
+            'description' => 'We are seeking a compassionate registered nurse to provide high-quality patient care...',
+            'salary' => 70000.00,
+            'image' => 'registered_nurse_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Patient assessment, Medication administration, Wound care',
+            'job_type' => 'Healthcare',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Associate Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Assess patient health needs, develop care plans, and provide nursing interventions...',
+            'company_id' => 2,
+            'category_id' => 2,
+            'city_id' => 3,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'title' => 'Physical Therapist',
+            'description' => 'We are looking for a skilled physical therapist to help patients improve their mobility and manage pain...',
+            'salary' => 75000.00,
+            'image' => 'physical_therapist_image.jpg',
+            'position' => 'Full-time',
+            'expiration_date' => '2024-05-24 00:00:00',
+            'skills' => 'Therapeutic exercises, Manual therapy, Patient education',
+            'job_type' => 'Healthcare',
+            'experience_level' => 'Mid-Level',
+            'education_level' => 'Doctorate Degree',
+            'is_remote' => false,
+            'urgent' => false,
+            'responsibilities' => 'Evaluate patient conditions, develop treatment plans, and provide physical therapy services...',
+            'company_id' => 1,
+            'category_id' => 2,
+            'city_id' => 6,
+            'user_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+
+     ];
+
+    DB::table('jobs')->insert($jobs);
+
     }
 }

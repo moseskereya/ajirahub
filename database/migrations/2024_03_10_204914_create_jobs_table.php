@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('salary', 10, 2);
             $table->string('image');
             $table->string('position');
-            $table->date('expiration_date'); 
+            $table->dateTime('expiration_date')->nullable(); 
             $table->text('skills')->nullable();
             $table->string('job_type')->nullable();
             $table->string('experience_level')->nullable();

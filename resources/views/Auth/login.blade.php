@@ -1,4 +1,4 @@
-<div class="model">
+{{-- <div class="model">
     <div id="login-modal">
         <div class="login-form default-form">
             <div class="form-inner">
@@ -40,10 +40,10 @@
     </div>
 </div>
 
-    
+     --}}
 
 
-     {{-- @extends('layout')
+     @extends('layout')
      @section('content')    
        <div class="page-wrapper">
          <!-- Preloader -->
@@ -99,4 +99,4 @@
            </div>
          </div>
        </div>
-     @endsection --}}
+     @endsection

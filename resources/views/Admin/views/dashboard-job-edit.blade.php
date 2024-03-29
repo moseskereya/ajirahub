@@ -13,10 +13,6 @@
   <!-- Dashboard -->
   <section class="user-dashboard">
     <div class="dashboard-outer">
-      <div class="upper-title-box">
-        <h3>Post a New Job!</h3>
-        <div class="text">Ready to jump back in?</div>
-      </div>
 
       <div class="row">
         <div class="col-lg-12">
@@ -24,32 +20,16 @@
           <div class="ls-widget">
             <div class="tabs-box">
               <div class="widget-title">
-                <h4>Post Job</h4>
+                <h4>Edit {{$job->title}}</h4>
               </div>
               <div class="widget-content">
-                <div class="post-job-steps">
-                  <div class="step">
-                    <span class="icon flaticon-briefcase"></span>
-                    <h5>Job Detail</h5>
-                  </div>
-
-                  <div class="step">
-                    <span class="icon flaticon-money"></span>
-                    <h5>Package &amp; Payments</h5>
-                  </div>
-                  <div class="step">
-                    <span class="icon flaticon-checked"></span>
-                    <h5>Confirmation</h5>
-                  </div>
-                </div>
-
-                <form class="default-form" action="/jobs" method="post" enctype="multipart/form-data">
+                <form class="default-form" action="/jobsupdate" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="row">
                     <!-- Input -->
                     <div class="form-group col-lg-12 col-md-12">
                       <label>Job Title</label>
-                      <input type="text" name="title" value="{{old('title')}}" placeholder="Title" required>
+                      <input type="text" name="title" value="{{ old('title', $job->title) }}" placeholder="Title" required>
                       @error('title')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -58,7 +38,9 @@
                     <!-- About Company -->
                     <div class="form-group col-lg-12 col-md-12">
                       <label>Job Description</label>
-                      <textarea name="description" placeholder="Spent several years working on sheep on Wall Street. Had moderate success investing in Yugo's on Wall Street. Managed a small team buying and selling Pogo sticks for farmers. Spent several years licensing licorice in West Palm Beach, FL. Developed several new methods for working it banjos in the aftermarket. Spent a weekend importing banjos in West Palm Beach, FL.In this position, the Software Engineer collaborates with Evention's Development team to continuously enhance our current software solutions as well as create new solutions to eliminate the back-office operations and management challenges present"></textarea>
+                      <textarea name="description" placeholder="Spent several years working on sheep on Wall Street. Had moderate success investing in Yugo's on Wall Street. Managed a small team buying and selling Pogo sticks for farmers. Spent several years licensing licorice in West Palm Beach, FL. Developed several new methods for working it banjos in the aftermarket. Spent a weekend importing banjos in West Palm Beach, FL.In this position, the Software Engineer collaborates with Evention's Development team to continuously enhance our current software solutions as well as create new solutions to eliminate the back-office operations and management challenges present">
+                       {{ old('description', $job->description) }}
+                      </textarea>
                     @error('description')
                       <span class="text-danger">{{ $message }}</span><q></q>
                      @enderror
@@ -66,8 +48,8 @@
                 
                     <!-- Input -->
                     <div class="form-group col-lg-6 col-md-12">
-                      <label>Position</label>
-                      <input type="text" name="position" value="{{old('position')}}" placeholder="jobs positions" required>
+                      <label>Position(s)</label>
+                      <input type="number" name="position" value="{{ old('position', $job->position) }}" placeholder="jobs positions" required>
                       @error('position')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -83,21 +65,26 @@
 
                       <div class="form-group col-lg-12 col-md-12">
                           <label>Required Skills</label>
-                          <textarea name="skills"  placeholder="skills 1, skills 2"></textarea>
+                          <textarea name="skills"  value="{{ old('skills', $job->skills) }}"  placeholder="skills 1, skills 2"></textarea>
                         @error('responsibilities')
                           <span class="text-danger">{{ $message }}</span>
                         @enderror
                      </div>
 
-                    <div class="form-group col-lg-6 col-md-12">
-                      <label>Job Category</label>
-                      <select class="chosen-select" name="category_id" style="display: none;" required>
-                        <option value="">Select Category</option>
-                        @foreach ($jobcategories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                        @endforeach
-                      </select>
-                    </div>
+                   <!-- Input -->
+                   <div class="form-group col-lg-6 col-md-12">
+                       <label>Job Category</label>
+                       <select class="chosen-select" name="category_id" required>
+                           <option value="">Select Category</option>
+                           @foreach ($jobcategories as $category)
+                               <option value="{{ $category->id }}" @if(old('category_id', $job->category_id) == $category->id) selected @endif>{{ $category->name }}</option>
+                           @endforeach
+                       </select>
+                       @error('category_id')
+                           <span class="text-danger">{{ $message }}</span>
+                       @enderror
+                   </div>
+                   
 
                     <div class="form-group col-lg-6 col-md-12">
                       <label>Job Type</label>
@@ -117,7 +104,9 @@
                     
                     <div class="form-group col-lg-12 col-md-12">
                       <label>Responsibilities</label>
-                      <textarea name="responsibilities" placeholder="responsibilities 1, responsibilitie 2"></textarea>
+                      <textarea name="responsibilities" placeholder="responsibilities 1, responsibilitie 2">
+                        {{ $job->responsibilities}}
+                      </textarea>
                     @error('responsibilities')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
